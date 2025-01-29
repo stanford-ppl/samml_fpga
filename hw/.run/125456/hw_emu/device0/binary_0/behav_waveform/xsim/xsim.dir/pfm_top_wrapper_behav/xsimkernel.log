@@ -1,7 +1,0 @@
-Running: xsim.dir/pfm_top_wrapper_behav/xsimk -wdb xilinx_aws-vu47p-f2_xdma-shell-v10162423_202410_1-0-vadd.link.wdb -simmode gui -simrunnum 0 -socket 55603
-Design successfully loaded
-Design Loading Memory Usage: 68620 KB (Peak: 68620 KB)
-Design Loading CPU Usage: 30 ms
-Simulation completed
-Simulation Memory Usage: 302132 KB (Peak: 302132 KB)
-Simulation CPU Usage: 13520 ms
