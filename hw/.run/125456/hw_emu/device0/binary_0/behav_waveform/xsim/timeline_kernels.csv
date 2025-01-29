@@ -1,0 +1,3 @@
+Kernel trace events
+Device, Binary, Kernel, Compute Unit, Function, Data Type, Index, Start Time (ms), End Time (ms), Value
+xilinx_aws-vu47p-f2_xdma-shell-v10162423_202410_1-0,vadd.link,vadd,vadd_1,top,top,0,0.455354,0.521854,0
