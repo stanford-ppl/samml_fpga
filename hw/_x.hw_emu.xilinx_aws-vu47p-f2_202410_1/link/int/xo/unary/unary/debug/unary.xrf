@@ -1,0 +1,12 @@
+Begin Function 'unary'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_1
+local result_1 <select_91> <integer> <> 'select' <../../../src/unary.cpp:71->../../../src/unary.cpp:91>
+result_1 /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/../../../src/unary.cpp:71
+result /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/../../../src/unary.cpp:91
+reg: result_1_reg_133[16:0] lv
+
+
+End Function 'unary'
+

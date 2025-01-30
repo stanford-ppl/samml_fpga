@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="krnl_unary.link">
+  <platform vendor="xilinx" boardid="aws-vu47p-f2" name="xdma-shell-v10162423" featureRomTime="0">
+    <version major="202410" minor="1"/>
+    <description/>
+    <board name="" vendor="" fpga="">
+      <interfaces/>
+      <memories>
+        <memory name="static_region_sim_ddr_0" type="ddr4" size="32.00GB"/>
+      </memories>
+      <images>
+        <image name="" type="HDPI"/>
+        <image name="" type="MDPI"/>
+        <image name="" type="LDPI"/>
+      </images>
+      <id>
+        <vendor/>
+        <device/>
+        <subsystem/>
+      </id>
+    </board>
+    <build_flow/>
+    <host architecture="unknown"/>
+    <device name="fpga0" fpgaDevice="virtexuplusHBM:xcvu47p:fsvh2892:-2LV:e" addrWidth="0">
+      <core name="OCL_REGION_0" target="hw_em" type="clc_region" clockFreq="0MHz" numComputeUnits="60">
+        <kernel name="unary" language="c" vlnv="xilinx.com:hls:unary:1.0" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="true" interrupt="true" hwControlProtocol="ap_ctrl_chain" countedAutoRestart="0" deadlockDetection="local" mailbox="none" swReset="false">
+          <module name="unary"/>
+          <port name="IN_VAL" mode="read_only" range="" dataWidth="24" portType="stream" base=""/>
+          <port name="OUT_VAL" mode="write_only" range="" dataWidth="24" portType="stream" base=""/>
+          <port name="S_AXI_CONTROL" mode="slave" range="0x10" dataWidth="32" portType="addressable" base="0x0"/>
+          <arg name="in_val" addressQualifier="4" id="0" port="IN_VAL" size="0x0" offset="0x0" hostOffset="0x0" hostSize="0x8" type="stream&lt;ap_int&lt;17>, 0>&amp;" origName="in_val" origUse="variable"/>
+          <arg name="out_val" addressQualifier="4" id="1" port="OUT_VAL" size="0x0" offset="0x0" hostOffset="0x0" hostSize="0x8" type="stream&lt;ap_int&lt;17>, 0>&amp;" origName="out_val" origUse="variable"/>
+          <compileWorkGroupSize x="1" y="1" z="1"/>
+          <maxWorkGroupSize x="1" y="1" z="1"/>
+          <string_table/>
+          <instance name="unary_1"/>
+          <FIFOInformation/>
+        </kernel>
+        <kernel name="mem_write" language="c" vlnv="xilinx.com:hls:mem_write:1.0" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="true" interrupt="true" hwControlProtocol="ap_ctrl_chain" countedAutoRestart="0" deadlockDetection="local" mailbox="none" swReset="false">
+          <module name="mem_write"/>
+          <port name="M_AXI_GMEM" mode="master" range="0xFFFFFFFF" dataWidth="32" portType="addressable" base="0x0"/>
+          <port name="STREAM" mode="read_only" range="" dataWidth="24" portType="stream" base=""/>
+          <port name="S_AXI_CONTROL" mode="slave" range="0x24" dataWidth="32" portType="addressable" base="0x0"/>
+          <arg name="mem" addressQualifier="1" id="0" port="M_AXI_GMEM" size="0x8" offset="0x10" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <arg name="size" addressQualifier="0" id="1" port="S_AXI_CONTROL" size="0x4" offset="0x1C" hostOffset="0x0" hostSize="0x4" type="unsigned int"/>
+          <arg name="stream" addressQualifier="4" id="2" port="STREAM" size="0x0" offset="0x0" hostOffset="0x0" hostSize="0x8" type="stream&lt;ap_int&lt;17>, 0>&amp;" origName="stream" origUse="variable"/>
+          <compileWorkGroupSize x="1" y="1" z="1"/>
+          <maxWorkGroupSize x="1" y="1" z="1"/>
+          <string_table/>
+          <instance name="mem_write_1"/>
+          <FIFOInformation/>
+        </kernel>
+        <kernel name="mem_read" language="c" vlnv="xilinx.com:hls:mem_read:1.0" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="true" interrupt="true" hwControlProtocol="ap_ctrl_chain" countedAutoRestart="0" deadlockDetection="local" mailbox="none" swReset="false">
+          <module name="mem_read"/>
+          <port name="M_AXI_GMEM" mode="master" range="0xFFFFFFFF" dataWidth="32" portType="addressable" base="0x0"/>
+          <port name="STREAM" mode="write_only" range="" dataWidth="24" portType="stream" base=""/>
+          <port name="S_AXI_CONTROL" mode="slave" range="0x24" dataWidth="32" portType="addressable" base="0x0"/>
+          <arg name="mem" addressQualifier="1" id="0" port="M_AXI_GMEM" size="0x8" offset="0x10" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <arg name="size" addressQualifier="0" id="1" port="S_AXI_CONTROL" size="0x4" offset="0x1C" hostOffset="0x0" hostSize="0x4" type="unsigned int"/>
+          <arg name="stream" addressQualifier="4" id="2" port="STREAM" size="0x0" offset="0x0" hostOffset="0x0" hostSize="0x8" type="stream&lt;ap_int&lt;17>, 0>&amp;" origName="stream" origUse="variable"/>
+          <compileWorkGroupSize x="1" y="1" z="1"/>
+          <maxWorkGroupSize x="1" y="1" z="1"/>
+          <string_table/>
+          <instance name="mem_read_1"/>
+          <FIFOInformation/>
+        </kernel>
+      </core>
+    </device>
+  </platform>
+</project>

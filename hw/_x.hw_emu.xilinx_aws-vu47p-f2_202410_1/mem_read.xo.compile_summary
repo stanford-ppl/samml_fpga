@@ -1,0 +1,239 @@
+<ENTRY>
+{
+ "thisFile": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Jan 30 20:09:05 2025",
+ "timestampMillis": "1738267745769",
+ "buildStep": {
+  "cmdId": "952ba300-a6f8-4c6c-93e8-fa817236edc5",
+  "name": "v++",
+  "logFile": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read/mem_read.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2024.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -c -g --save-temps -t hw_emu --platform xilinx_aws-vu47p-f2_202410_1 -k mem_read --temp_dir ./_x.hw_emu.xilinx_aws-vu47p-f2_202410_1 -Isrc -o_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read.xo src/mem_read.cpp ",
+  "args": [
+   "-c",
+   "-g",
+   "--save-temps",
+   "-t",
+   "hw_emu",
+   "--platform",
+   "xilinx_aws-vu47p-f2_202410_1",
+   "-k",
+   "mem_read",
+   "--temp_dir",
+   "./_x.hw_emu.xilinx_aws-vu47p-f2_202410_1",
+   "-Isrc",
+   "-o_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read.xo",
+   "src/mem_read.cpp"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ubuntu/samml_fpga/hw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 30 20:09:05 2025",
+ "timestampMillis": "1738267745769",
+ "status": {
+  "cmdId": "952ba300-a6f8-4c6c-93e8-fa817236edc5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Jan 30 20:09:08 2025",
+ "timestampMillis": "1738267748187",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_aws-vu47p-f2_202410_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/Xilinx/Vitis/2024.1/platforms",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW_EMU",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "mem_read",
+     "file": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/ubuntu/samml_fpga/hw/src/mem_read.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2024.1. SW Build 5074859 on 2024-05-20-23:21:20"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 30 20:09:08 2025",
+ "timestampMillis": "1738267748188",
+ "buildStep": {
+  "cmdId": "957ab596-7244-409a-be5e-81a5b8fc3203",
+  "name": "vitis_hls",
+  "logFile": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read/mem_read/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read/mem_read/mem_read.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read/mem_read/mem_read.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ubuntu/samml_fpga/hw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 30 20:09:08 2025",
+ "timestampMillis": "1738267748189",
+ "status": {
+  "cmdId": "957ab596-7244-409a-be5e-81a5b8fc3203",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 30 20:09:32 2025",
+ "timestampMillis": "1738267772883",
+ "status": {
+  "cmdId": "957ab596-7244-409a-be5e-81a5b8fc3203",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 30 20:09:32 2025",
+ "timestampMillis": "1738267772887",
+ "report": {
+  "path": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read/mem_read/mem_read/solution/.autopilot/db/mem_read.design.xml",
+  "name": "mem_read",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 30 20:09:32 2025",
+ "timestampMillis": "1738267772888",
+ "report": {
+  "path": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read/mem_read/mem_read/solution/.autopilot/db/.message_syn.xml",
+  "name": "mem_read",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 30 20:09:32 2025",
+ "timestampMillis": "1738267772888",
+ "report": {
+  "path": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/reports/mem_read/hls_reports/mem_read_csynth.rpt",
+  "name": "mem_read",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 30 20:09:32 2025",
+ "timestampMillis": "1738267772888",
+ "report": {
+  "path": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read/mem_read/mem_read/solution/syn/report/mem_read_csynth.xml",
+  "name": "mem_read",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 30 20:09:32 2025",
+ "timestampMillis": "1738267772890",
+ "report": {
+  "path": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/reports/mem_read/system_estimate_mem_read.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 30 20:09:32 2025",
+ "timestampMillis": "1738267772916",
+ "status": {
+  "cmdId": "952ba300-a6f8-4c6c-93e8-fa817236edc5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 30 20:09:32 2025",
+ "timestampMillis": "1738267772963",
+ "report": {
+  "path": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/reports/mem_read/v++_compile_mem_read_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 30 20:09:32 2025",
+ "timestampMillis": "1738267772963",
+ "report": {
+  "path": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/v++_compile_mem_read_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

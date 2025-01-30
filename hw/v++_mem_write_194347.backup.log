@@ -1,0 +1,19 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/reports/mem_write
+	Log files: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/logs/mem_write
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_write.xo.compile_summary, at Thu Jan 30 20:06:03 2025
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/reports/mem_write/v++_compile_mem_write_guidance.html', at Thu Jan 30 20:06:03 2025
+INFO: [v++ 60-895]   Target platform: /opt/Xilinx/Vitis/2024.1/platforms/xilinx_aws-vu47p-f2_202410_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/Xilinx/Vitis/2024.1/platforms/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2024.1
+INFO: [v++ 60-585] Compiling for hardware emulation target
+INFO: [v++ 60-423]   Target device: xilinx_aws-vu47p-f2_202410_1
+INFO: [v++ 60-242] Creating kernel: 'mem_write'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: mem_write Log file: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_write/mem_write/vitis_hls.log :
+ERROR: [v++ 214-157] Top function not found: there is no function named 'mem_write'
+ERROR: [v++ 60-300] Failed to build kernel(ip) mem_write, see log for details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_write/mem_write/vitis_hls.log
+ERROR: [v++ 60-773] In '/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_write/mem_write/vitis_hls.log', caught Tcl error: ERROR: [HLS 214-157] Top function not found: there is no function named 'mem_write'
+ERROR: [v++ 60-599] Kernel compilation failed to complete
+ERROR: [v++ 60-592] Failed to finish compilation
+INFO: [v++ 60-1653] Closing dispatch client.

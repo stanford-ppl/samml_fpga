@@ -1,0 +1,14 @@
+{
+  "0": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "mem_read.cpp",
+    "fileloc": 22,
+    "instructions": 34,
+    "name": "mem_read",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 34
+  }
+}

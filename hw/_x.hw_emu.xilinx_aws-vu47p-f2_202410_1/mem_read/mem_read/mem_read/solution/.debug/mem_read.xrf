@@ -1,0 +1,29 @@
+Begin Function 'mem_read'
+
+RTL state condition: (1'b1 == 1'b1)
+# ST_73
+local trunc_ln27 <trunc_27> <integer> <> 'trunc' <../../../src/mem_read.cpp:27>
+trunc_ln27 /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read/mem_read/../../../src/mem_read.cpp:27
+reg: trunc_ln27_reg_234[16:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_1
+local mem_read <read_22> <integer> <> 'read' <../../../src/mem_read.cpp:22>
+mem_read /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read/mem_read/../../../src/mem_read.cpp:22
+reg: mem_read_reg_214[63:0] lv
+
+local zext_ln23 <zext_23> <integer> <> 'zext' <../../../src/mem_read.cpp:23>
+zext_ln23 /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read/mem_read/../../../src/mem_read.cpp:23
+reg: zext_ln23_reg_219[63:0] lv
+
+local first_iter_0 <> <integer> <Phi> 'phi' <>
+reg: first_iter_0_reg_116[0:0] lv
+
+local icmp_ln23_1 <icmp_23> <integer> <Comparator> 'icmp' <../../../src/mem_read.cpp:23>
+icmp_ln23_1 /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read/mem_read/../../../src/mem_read.cpp:23
+reg: icmp_ln23_1_reg_224[0:0] lv
+
+
+End Function 'mem_read'
+

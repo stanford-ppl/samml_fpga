@@ -1,36 +1,33 @@
 {
-    "name": "Hello World XRT (XRT Native API's)", 
+    "name": "Stream Free Running Kernel (XRT Native API's)", 
     "description": [
-        "This is simple example of vector addition to describe the usage of XRT Native API's. The kernel uses HLS Dataflow which allows the user to schedule multiple task together to achieve higher throughput."
+        "This is simple example which demonstrate how to use and configure a free running kernel."
     ],
     "flow": "vitis",
     "keywords": [
-        "xrt::device",
-        "load_xclbin", 
-        "xrt::bo",
-        "xrt::kernel", 
-        "map", 
-        "sync",
-        "XCL_BO_SYNC_BO_TO_DEVICE",
-        "XCL_BO_SYNC_BO_FROM_DEVICE",
-        "gmem",
-        "#pragma HLS INTERFACE",
-        "dataflow",
-        "hls::stream"
+        "ap_ctrl_none",
+        "stream_connect" 
     ], 
     "key_concepts": [
-        "XRT Native API",
-        "Task Level Parallelism"
-    ],
-    "platform_blocklist": [
-        "nodma"
+        "Free Running Kernel" 
     ], 
+    "platform_blocklist": [
+        "2018",
+        "qep",
+        "aws-vu9p-f1",
+        "samsung",
+        "vck",
+        "zc",
+        "u2_",
+        "nodma"
+    ],
     "os": [
         "Linux"
     ], 
     "runtime": [
         "OpenCL"
     ], 
+    "platform_type": "pcie",
     "host": {
         "host_exe": "samml_xrt",
         "compiler": {
@@ -54,19 +51,29 @@
         {
             "accelerators": [
                 {
-                    "name": "vadd", 
-                    "location": "src/vadd.cpp"
+                    "name": "mem_read", 
+                    "location": "src/mem_read.cpp"
+                },
+                {
+                    "name": "unary", 
+                    "location": "src/unary.cpp"
+                },
+                {
+                    "name": "mem_write", 
+                    "location": "src/mem_write.cpp"
                 }
             ], 
-            "name": "vadd"
+            "name": "krnl_unary",
+            "ldclflags": "--config PROJECT/krnl_unary.cfg"
         }
     ],
     "launch": [
         {
-            "cmd_args": "-x BUILD/vadd.xclbin", 
+            "cmd_args": "-x BUILD/krnl_unary.xclbin", 
             "name": "generic launch for all flows"
         }
     ], 
+    "match_ini": "false",
     "contributors": [
         {
             "url": "http://www.xilinx.com", 

@@ -1,0 +1,24 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../../src/unary.cpp:70:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="unary_compute" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary.tcl:27:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="unary" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=unary" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../../src/unary.cpp:82:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="unary" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=in_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../../src/unary.cpp:83:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="unary" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=out_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../../src/unary.cpp:89:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="unary" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../../../src/unary.cpp:91:37" msg_body="Inlining function 'unary_compute(ap_int&lt;17&gt;)' into 'unary(hls::stream&lt;ap_int&lt;17&gt;, 0&gt;&amp;, hls::stream&lt;ap_int&lt;17&gt;, 0&gt;&amp;)'">
+        <args Callee="unary_compute(ap_int&lt;17&gt;)" Callee-DebugLoc="File ../../../src/unary.cpp Line 69 Column 0" Caller="unary(hls::stream&lt;ap_int&lt;17&gt;, 0&gt;&amp;, hls::stream&lt;ap_int&lt;17&gt;, 0&gt;&amp;)" Caller-DebugLoc="File ../../../src/unary.cpp Line 81 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../../../src/unary.cpp:81:0" msg_body="Inlining function 'bool is_msb_set&lt;17&gt;(ap_int&lt;17&gt;)' into 'unary(hls::stream&lt;ap_int&lt;17&gt;, 0&gt;&amp;, hls::stream&lt;ap_int&lt;17&gt;, 0&gt;&amp;)'">
+        <args Callee="bool is_msb_set&lt;17&gt;(ap_int&lt;17&gt;)" Callee-DebugLoc="File /home/ubuntu/samml_fpga/hw/src/common.h Line 14 Column 0" Caller="unary(hls::stream&lt;ap_int&lt;17&gt;, 0&gt;&amp;, hls::stream&lt;ap_int&lt;17&gt;, 0&gt;&amp;)" Caller-DebugLoc="File ../../../src/unary.cpp Line 81 Column 0"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

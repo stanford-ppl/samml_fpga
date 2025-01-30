@@ -56,6 +56,7 @@ Input Vector 2 from Global Memory --->|             |      |__|
 
 #include <stdint.h>
 #include <hls_stream.h>
+#include "common.h"
 
 #define DATA_SIZE 4096
 

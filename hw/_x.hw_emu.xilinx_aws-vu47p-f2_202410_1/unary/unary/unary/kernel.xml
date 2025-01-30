@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root versionMajor="1" versionMinor="5">
+  <kernel name="unary" language="c" vlnv="xilinx.com:hls:unary:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="true" compileOptions=" -g -I /home/ubuntu/samml_fpga/hw/src" profileType="" interrupt="true" hwControlProtocol="ap_ctrl_chain" countedAutoRestart="0" deadlockDetection="local" mailbox="none" swReset="false">
+    <ports>
+      <port name="IN_VAL" mode="read_only" dataWidth="24" portType="stream"/>
+      <port name="OUT_VAL" mode="write_only" dataWidth="24" portType="stream"/>
+      <port name="S_AXI_CONTROL" mode="slave" range="0x10" dataWidth="32" portType="addressable" base="0x0"/>
+    </ports>
+    <args>
+      <arg name="in_val" addressQualifier="4" id="0" port="IN_VAL" size="0x0" offset="0x0" hostOffset="0x0" hostSize="0x8" type="stream&lt;ap_int&lt;17>, 0>&amp;" origName="in_val" origUse="variable"/>
+      <arg name="out_val" addressQualifier="4" id="1" port="OUT_VAL" size="0x0" offset="0x0" hostOffset="0x0" hostSize="0x8" type="stream&lt;ap_int&lt;17>, 0>&amp;" origName="out_val" origUse="variable"/>
+    </args>
+    <compileWorkGroupSize x="1" y="1" z="1"/>
+    <maxWorkGroupSize x="1" y="1" z="1"/>
+  </kernel>
+</root>

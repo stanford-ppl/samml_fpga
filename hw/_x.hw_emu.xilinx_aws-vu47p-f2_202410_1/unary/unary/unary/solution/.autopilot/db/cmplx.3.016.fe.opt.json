@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "unary.cpp",
+    "fileloc": 80,
+    "instructions": 27,
+    "loads": {
+      "L": 1
+    },
+    "name": "unary",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 27
+  }
+}

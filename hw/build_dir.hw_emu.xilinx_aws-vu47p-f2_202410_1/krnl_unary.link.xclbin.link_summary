@@ -1,0 +1,256 @@
+<ENTRY>
+{
+ "thisFile": "/home/ubuntu/samml_fpga/hw/build_dir.hw_emu.xilinx_aws-vu47p-f2_202410_1/krnl_unary.link.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Jan 30 20:10:07 2025",
+ "timestampMillis": "1738267807420",
+ "buildStep": {
+  "cmdId": "fc609fca-56f9-4b9f-a723-ba86378f9026",
+  "name": "v++",
+  "logFile": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2024.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -l -g --save-temps -t hw_emu --platform xilinx_aws-vu47p-f2_202410_1 --temp_dir ./_x.hw_emu.xilinx_aws-vu47p-f2_202410_1 --config ./krnl_unary.cfg -o./build_dir.hw_emu.xilinx_aws-vu47p-f2_202410_1/krnl_unary.link.xclbin _x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read.xo _x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary.xo _x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_write.xo ",
+  "args": [
+   "-l",
+   "-g",
+   "--save-temps",
+   "-t",
+   "hw_emu",
+   "--platform",
+   "xilinx_aws-vu47p-f2_202410_1",
+   "--temp_dir",
+   "./_x.hw_emu.xilinx_aws-vu47p-f2_202410_1",
+   "--config",
+   "./krnl_unary.cfg",
+   "-o./build_dir.hw_emu.xilinx_aws-vu47p-f2_202410_1/krnl_unary.link.xclbin",
+   "_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read.xo",
+   "_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary.xo",
+   "_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_write.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/ubuntu/samml_fpga/hw/krnl_unary.cfg",
+    "content": "[connectivity]\nstream_connect=mem_read_1.stream:unary_1.input\nstream_connect=unary_1.output:mem_write_1.stream\n"
+   }
+  ],
+  "cwd": "/home/ubuntu/samml_fpga/hw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 30 20:10:07 2025",
+ "timestampMillis": "1738267807421",
+ "status": {
+  "cmdId": "fc609fca-56f9-4b9f-a723-ba86378f9026",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Jan 30 20:10:09 2025",
+ "timestampMillis": "1738267809852",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_aws-vu47p-f2_202410_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/Xilinx/Vitis/2024.1/platforms",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW_EMU",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "krnl_unary.link",
+    "file": "/home/ubuntu/samml_fpga/hw/build_dir.hw_emu.xilinx_aws-vu47p-f2_202410_1/krnl_unary.link.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "mem_read",
+     "file": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/int/xo/mem_read/mem_read/cpu_sources/mem_read.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "mem_read_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "unary",
+     "file": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/int/xo/unary/unary/cpu_sources/unary.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "unary_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "mem_write",
+     "file": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_write.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/int/xo/mem_write/mem_write/cpu_sources/mem_write.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "mem_write_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2024.1. SW Build 5074859 on 2024-05-20-23:21:20"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 30 20:10:10 2025",
+ "timestampMillis": "1738267810020",
+ "buildStep": {
+  "cmdId": "b69d8645-c259-4e0a-9c9c-84d6af183156",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read.xo --xo /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary.xo --xo /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_write.xo -keep --config /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/int/syslinkConfig.ini --xpfm /opt/Xilinx/Vitis/2024.1/platforms/xilinx_aws-vu47p-f2_202410_1.xpfm --target emu --output_dir /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/int --temp_dir /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read.xo",
+   "--xo",
+   "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary.xo",
+   "--xo",
+   "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_write.xo",
+   "-keep",
+   "--config",
+   "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/Xilinx/Vitis/2024.1/platforms/xilinx_aws-vu47p-f2_202410_1.xpfm",
+   "--target",
+   "emu",
+   "--output_dir",
+   "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/int",
+   "--temp_dir",
+   "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/int/syslinkConfig.ini",
+    "content": "sc=mem_read_1.stream:unary_1.input\nsc=unary_1.output:mem_write_1.stream\n\n"
+   }
+  ],
+  "cwd": "/home/ubuntu/samml_fpga/hw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 30 20:10:10 2025",
+ "timestampMillis": "1738267810020",
+ "status": {
+  "cmdId": "b69d8645-c259-4e0a-9c9c-84d6af183156",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 30 20:10:17 2025",
+ "timestampMillis": "1738267817664",
+ "status": {
+  "cmdId": "b69d8645-c259-4e0a-9c9c-84d6af183156",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 30 20:10:17 2025",
+ "timestampMillis": "1738267817667",
+ "report": {
+  "path": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 30 20:10:17 2025",
+ "timestampMillis": "1738267817667",
+ "status": {
+  "cmdId": "fc609fca-56f9-4b9f-a723-ba86378f9026",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 30 20:10:17 2025",
+ "timestampMillis": "1738267817713",
+ "report": {
+  "path": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/reports/link/v++_link_krnl_unary.link_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 30 20:10:17 2025",
+ "timestampMillis": "1738267817713",
+ "report": {
+  "path": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/v++_link_krnl_unary.link_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

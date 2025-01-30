@@ -1,0 +1,115 @@
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../../../src/mem_read.cpp, Line: 23, Column: 22 }
+Function:        mem_read
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_23_1
+  - String:          ' '
+  - LoopLoc:         '../../../src/mem_read.cpp:23:22'
+  - String:          ' '
+  - Function:        mem_read
+    DebugLoc:        { File: ../../../src/mem_read.cpp, Line: 22, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../../../src/mem_read.cpp, Line: 24, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.4
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: ../../../src/mem_read.cpp, Line: 23, Column: 22 }
+Function:        mem_read
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../../../src/mem_read.cpp, Line: 23, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_23_1
+  - String:          ' '
+  - LoopLoc:         '../../../src/mem_read.cpp:23:22'
+  - String:          ' '
+  - Function:        mem_read
+    DebugLoc:        { File: ../../../src/mem_read.cpp, Line: 22, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_23_1
+  - String:          '> at '
+  - LoopLoc:         '../../../src/mem_read.cpp:23:22'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../../../src/mem_read.cpp, Line: 23, Column: 22 }
+Function:        mem_read
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_23_1
+  - String:          ' '
+  - LoopLoc:         '../../../src/mem_read.cpp:23:22'
+  - String:          ' '
+  - Function:        mem_read
+    DebugLoc:        { File: ../../../src/mem_read.cpp, Line: 22, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../../../src/mem_read.cpp, Line: 23, Column: 22 }
+Function:        mem_read
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_23_1
+  - String:          '''('
+  - LoopLoc:         '../../../src/mem_read.cpp:23:22'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

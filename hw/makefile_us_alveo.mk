@@ -48,16 +48,16 @@ include ./utils.mk
 TEMP_DIR := ./_x.$(TARGET).$(XSA)
 BUILD_DIR := ./build_dir.$(TARGET).$(XSA)
 
-LINK_OUTPUT := $(BUILD_DIR)/vadd.link.xclbin
+LINK_OUTPUT := $(BUILD_DIR)/krnl_unary.link.xclbin
 PACKAGE_OUT = ./package.$(TARGET)
 
 VPP_PFLAGS := 
-CMD_ARGS = -x $(BUILD_DIR)/vadd.xclbin
+CMD_ARGS = -x $(BUILD_DIR)/krnl_unary.xclbin
 CXXFLAGS += -I$(XILINX_XRT)/include -I$(XILINX_VIVADO)/include -Wall -O0 -g -std=c++1y
 LDFLAGS += -L$(XILINX_XRT)/lib -pthread -lOpenCL
 
 ########################## Checking if PLATFORM in allowlist #######################
-PLATFORM_BLOCKLIST += nodma 
+PLATFORM_BLOCKLIST += 2018 qep aws-vu9p-f1 samsung vck zc u2_ nodma 
 ############################## Setting up Host Variables ##############################
 #Include Required Host Source Files
 CXXFLAGS += -I$(XF_PROJ_ROOT)/common/includes/cmdparser
@@ -73,31 +73,39 @@ LDFLAGS += -luuid -lxrt_coreutil
 VPP_FLAGS += --save-temps 
 
 
-EXECUTABLE = ./hw_xrt
+# Kernel linker flags
+VPP_LDFLAGS_krnl_unary += --config ./krnl_unary.cfg
+EXECUTABLE = ./samml_xrt
 EMCONFIG_DIR = $(TEMP_DIR)
 
 ############################## Setting Targets ##############################
 .PHONY: all clean cleanall docs emconfig
-all: check-platform check-device check-vitis $(EXECUTABLE) $(BUILD_DIR)/vadd.xclbin emconfig
+all: check-platform check-device check-vitis $(EXECUTABLE) $(BUILD_DIR)/krnl_unary.xclbin emconfig
 
 .PHONY: host
 host: $(EXECUTABLE)
 
 .PHONY: build
-build: check-vitis check-device $(BUILD_DIR)/vadd.xclbin
+build: check-vitis check-device $(BUILD_DIR)/krnl_unary.xclbin
 
 .PHONY: xclbin
 xclbin: build
 
 ############################## Setting Rules for Binary Containers (Building Kernels) ##############################
-$(TEMP_DIR)/vadd.xo: src/vadd.cpp
+$(TEMP_DIR)/mem_read.xo: src/mem_read.cpp
 	mkdir -p $(TEMP_DIR)
-	v++ -c $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) -k vadd --temp_dir $(TEMP_DIR)  -I'$(<D)' -o'$@' '$<'
+	v++ -c $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) -k mem_read --temp_dir $(TEMP_DIR)  -I'$(<D)' -o'$@' '$<'
+$(TEMP_DIR)/unary.xo: src/unary.cpp
+	mkdir -p $(TEMP_DIR)
+	v++ -c $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) -k unary --temp_dir $(TEMP_DIR)  -I'$(<D)' -o'$@' '$<'
+$(TEMP_DIR)/mem_write.xo: src/mem_write.cpp
+	mkdir -p $(TEMP_DIR)
+	v++ -c $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) -k mem_write --temp_dir $(TEMP_DIR)  -I'$(<D)' -o'$@' '$<'
 
-$(BUILD_DIR)/vadd.xclbin: $(TEMP_DIR)/vadd.xo
+$(BUILD_DIR)/krnl_unary.xclbin: $(TEMP_DIR)/mem_read.xo $(TEMP_DIR)/unary.xo $(TEMP_DIR)/mem_write.xo
 	mkdir -p $(BUILD_DIR)
-	v++ -l $(VPP_FLAGS) $(VPP_LDFLAGS) -t $(TARGET) --platform $(PLATFORM) --temp_dir $(TEMP_DIR) -o'$(LINK_OUTPUT)' $(+)
-	v++ -p $(LINK_OUTPUT) $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) --package.out_dir $(PACKAGE_OUT) -o $(BUILD_DIR)/vadd.xclbin
+	v++ -l $(VPP_FLAGS) $(VPP_LDFLAGS) -t $(TARGET) --platform $(PLATFORM) --temp_dir $(TEMP_DIR) $(VPP_LDFLAGS_krnl_unary) -o'$(LINK_OUTPUT)' $(+)
+	v++ -p $(LINK_OUTPUT) $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) --package.out_dir $(PACKAGE_OUT) -o $(BUILD_DIR)/krnl_unary.xclbin
 
 ############################## Setting Rules for Host (Building Host Executable) ##############################
 $(EXECUTABLE): $(HOST_SRCS) | check-xrt
@@ -115,6 +123,8 @@ ifeq ($(TARGET),$(filter $(TARGET),hw_emu))
 else
 	$(EXECUTABLE) $(CMD_ARGS)
 endif
+
+
 ifneq ($(TARGET),$(findstring $(TARGET), hw hw_emu))
 $(error Software Emulation is not supported for the examples and will be deprecated in the tool in 2024.2. Please run hw_emu or hw target.)
 endif
@@ -126,6 +136,8 @@ ifeq ($(TARGET),$(filter $(TARGET),hw_emu))
 else
 	$(EXECUTABLE) $(CMD_ARGS)
 endif
+
+
 ifneq ($(TARGET),$(findstring $(TARGET), hw hw_emu))
 $(warning WARNING:Software Emulation is not supported for the examples and will be deprecated in the tool in 2024.2. Please run hw_emu or hw target.)
 endif

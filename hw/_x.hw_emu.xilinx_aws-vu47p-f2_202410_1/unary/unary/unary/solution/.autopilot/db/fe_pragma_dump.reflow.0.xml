@@ -1,0 +1,31 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="../../../src/unary.cpp" line="89" pragmaType="pipeline" parentfunction="unary" off="0" ii="1" rewind="0" style=""/>
+<pragma file="../../../src/unary.cpp" line="82" pragmaType="interface" parentfunction="unary" mode="axis" port="in_val" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../../../src/unary.cpp" line="83" pragmaType="interface" parentfunction="unary" mode="axis" port="out_val" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<17, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<17>::ap_int<17, true>(ap_int_base<17, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator!=<17, true>(ap_int_base<17, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<17>::ap_int(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<17, true>::RType<17, true>::arg1 operator<<<17, true>(ap_int_base<17, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<17, true>::operator!=<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<49, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<49>::ap_int<49, true>(ap_int_base<49, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="_ZN8ssdm_intILi49ELb1EEC2EDq49_i" off="0" region="0" recursive="0"/>
+<pragma file="/opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="ssdm_int<32, true>::ssdm_int(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<17, true>::RType<17, true>::logic operator&<17, true, 17, true>(ap_int_base<17, true> const&, ap_int_base<17, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<49, true>::ap_int_base<17, true>(ap_int_base<17, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<49, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<17, true>::RType<32, true>::mult operator*<17, true, 32, true>(ap_int_base<17, true> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<17, true>::ap_int_base<49, true>(ap_int_base<49, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="/opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="_ZN8ssdm_intILi17ELb1EEC2EDq17_i" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<17, true>::RType<($_0)32, true>::mult operator*<17, true>(ap_int_base<17, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<17>::ap_int<49>(ap_int<49> const&)" off="0" region="0" recursive="0"/>
+<pragma file="../../../src/unary.cpp" line="70" pragmaType="inline" parentfunction="unary_compute" off="0" region="0" recursive="0"/>
+</pragmas>

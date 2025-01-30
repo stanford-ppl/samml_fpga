@@ -1,0 +1,45 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/reports/link
+	Log files: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/ubuntu/samml_fpga/hw/build_dir.hw_emu.xilinx_aws-vu47p-f2_202410_1/krnl_unary.link.xclbin.link_summary, at Thu Jan 30 20:10:07 2025
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/reports/link/v++_link_krnl_unary.link_guidance.html', at Thu Jan 30 20:10:07 2025
+INFO: [v++ 60-895]   Target platform: /opt/Xilinx/Vitis/2024.1/platforms/xilinx_aws-vu47p-f2_202410_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/Xilinx/Vitis/2024.1/platforms/hw_emu/hw_emu.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2024.1
+INFO: [v++ 60-629] Linking for hardware emulation target
+INFO: [v++ 60-423]   Target device: xilinx_aws-vu47p-f2_202410_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [20:10:10] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read.xo --xo /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary.xo --xo /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_write.xo -keep --config /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/int/syslinkConfig.ini --xpfm /opt/Xilinx/Vitis/2024.1/platforms/xilinx_aws-vu47p-f2_202410_1.xpfm --target emu --output_dir /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/int --temp_dir /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/run_link
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_read.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_write.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [20:10:11] build_xd_ip_db started: /opt/Xilinx/Vitis/2024.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/sys_link/hw_emu.hpfm -clkid 0 -ip /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/sys_link/iprepo/xilinx_com_hls_mem_write_1_0,mem_write -ip /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/sys_link/iprepo/xilinx_com_hls_unary_1_0,unary -ip /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/sys_link/iprepo/xilinx_com_hls_mem_read_1_0,mem_read -o /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [20:10:15] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 465.000 ; gain = 0.000 ; free physical = 494018 ; free virtual = 519925
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [20:10:15] cfgen started: /opt/Xilinx/Vitis/2024.1/bin/cfgen  -sc mem_read_1.stream:unary_1.input -sc unary_1.output:mem_write_1.stream -dpa_mem_offload false -dpa_aie_mem_offload false -dmclkid 0 -r /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: mem_read, num: 1  {mem_read_1}
+INFO: [CFGEN 83-0]   kernel: mem_write, num: 1  {mem_write_1}
+INFO: [CFGEN 83-0]   kernel: unary, num: 1  {unary_1}
+INFO: [CFGEN 83-0] Stream Specs: 
+INFO: [CFGEN 83-0]   mem_read_1.stream => unary_1.input
+INFO: [CFGEN 83-0]   unary_1.output => mem_write_1.stream
+ERROR: [CFGEN 83-2284] --sc tag applied to nonexistant port unary_1.input
+ERROR: [CFGEN 83-2284] --sc tag applied to nonexistant port unary_1.output
+ERROR: [CFGEN 83-2298] Exiting due to previous error
+ERROR: [SYSTEM_LINK 82-36] [20:10:17] cfgen failed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 465.000 ; gain = 0.000 ; free physical = 494008 ; free virtual = 519917
+ERROR: [SYSTEM_LINK 82-62] Error generating design file for /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/sys_link/cfgraph/cfgen_cfgraph.xml, command: /opt/Xilinx/Vitis/2024.1/bin/cfgen  -sc mem_read_1.stream:unary_1.input -sc unary_1.output:mem_write_1.stream -dpa_mem_offload false -dpa_aie_mem_offload false -dmclkid 0 -r /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/link/sys_link/cfgraph/cfgen_cfgraph.xml
+ERROR: [SYSTEM_LINK 82-96] Error applying explicit connections to the system connectivity graph
+ERROR: [SYSTEM_LINK 82-79] Unable to create system connectivity graph
+INFO: [v++ 60-1442] [20:10:17] Run run_link: Step system_link: Failed
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 495.277 ; gain = 0.000 ; free physical = 494072 ; free virtual = 519981
+ERROR: [v++ 60-661] v++ link run 'run_link' failed
+ERROR: [v++ 60-626] Kernel link failed to complete
+ERROR: [v++ 60-703] Failed to finish linking
+INFO: [v++ 60-1653] Closing dispatch client.

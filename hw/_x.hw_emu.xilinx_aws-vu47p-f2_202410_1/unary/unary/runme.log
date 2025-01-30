@@ -1,0 +1,152 @@
+
+*** Running vitis_hls
+    with args -f unary.tcl -messageDb vitis_hls.pb
+
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Thu Jan 30 20:05:38 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'ubuntu' on host 'ip-172-31-45-23.ec2.internal' (Linux_x86_64 version 5.15.0-1062-aws) on Thu Jan 30 20:05:40 UTC 2025
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'unary.tcl'
+INFO: [HLS 200-1510] Running: open_project unary 
+INFO: [HLS 200-10] Creating and opening project '/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary'.
+INFO: [HLS 200-1510] Running: set_top unary 
+INFO: [HLS 200-1510] Running: add_files /home/ubuntu/samml_fpga/hw/src/unary.cpp -cflags  -g -I /home/ubuntu/samml_fpga/hw/src 
+INFO: [HLS 200-10] Adding design file '/home/ubuntu/samml_fpga/hw/src/unary.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -flow_target vitis solution 
+INFO: [HLS 200-10] Creating and opening solution '/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu47p-fsvh2892-2LV-e 
+INFO: [HLS 200-1611] Setting target device to 'xcvu47p-fsvh2892-2LV-e'
+INFO: [HLS 200-1510] Running: create_clock -period 75.050000MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.324ns.
+INFO: [HLS 200-1510] Running: config_rtl -kernel_profile 
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_debug -enable 
+INFO: [HLS 200-1510] Running: config_rtl -deadlock_detection sim 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_conservative_mode=1 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_export -format xo -ipname unary 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 222.762 MB.
+INFO: [HLS 200-10] Analyzing design file '../../../src/unary.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.39 seconds. CPU system time: 0.41 seconds. Elapsed time: 2.8 seconds; current allocated memory: 224.965 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 355 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 20 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 20 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'unary_compute(ap_int<17>)' into 'unary(hls::stream<ap_int<17>, 0>&, hls::stream<ap_int<17>, 0>&)' (../../../src/unary.cpp:91:37)
+INFO: [HLS 214-178] Inlining function 'bool is_msb_set<17>(ap_int<17>)' into 'unary(hls::stream<ap_int<17>, 0>&, hls::stream<ap_int<17>, 0>&)' (../../../src/unary.cpp:81:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.66 seconds. CPU system time: 0.29 seconds. Elapsed time: 6.7 seconds; current allocated memory: 234.734 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 234.734 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 234.852 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 234.852 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 255.742 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 246.488 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'unary' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'unary' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_88_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_88_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.05 seconds; current allocated memory: 263.035 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 263.035 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'unary' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'unary/in_val' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'unary/out_val' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'unary' to 's_axilite & ap_ctrl_chain'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'unary' pipeline 'VITIS_LOOP_88_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'unary'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 263.035 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 265.008 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.24 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.25 seconds; current allocated memory: 269.836 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for unary.
+INFO: [VLOG 209-307] Generating Verilog RTL for unary.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 604.71 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:10; Allocated memory: 47.074 MB.
+INFO: [HLS 200-1510] Running: export_design 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Thu Jan 30 20:05:52 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/solution_data.json outdir=/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/impl/ip srcdir=/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/impl/ip/misc
+INFO: Copied 6 verilog file(s) to /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/impl/ip/hdl/verilog
+INFO: Copied 4 vhdl file(s) to /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/impl/ip/drivers
+ipx::create_core: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1445.633 ; gain = 0.023 ; free physical = 493339 ; free virtual = 519220
+INFO: Import ports from HDL: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/impl/ip/hdl/vhdl/unary.vhd (unary)
+INFO: Add axi4lite interface s_axi_control
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add data interface event_done
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'.
+INFO: Add interrupt interface interrupt
+INFO: Add data interface event_start
+INFO: Add axi4stream interface in_val
+INFO: Add axi4stream interface out_val
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/impl/ip/component.xml
+Generating XO file: export.xo in directory /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/impl
+Running: package_xo -xo_path /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/impl/export.xo -kernel_xml /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/../kernel.xml -kernel_name unary -ip_directory /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/impl/ip -kernel_files /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/../../../../../src/unary.cpp -hls_directory /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/impl/misc/hls_files -kernel_json /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/solution_data.json
+INFO: Created IP archive /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary/solution/impl/ip/xilinx_com_hls_unary_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 30 20:05:59 2025...
+INFO: [HLS 200-802] Generated output file unary/solution/impl/export.xo
+INFO: [HLS 200-2161] Finished Command export_design Elapsed time: 00:00:09; Allocated memory: 3.926 MB.
+INFO: [HLS 200-1510] Running: close_project 
+HLS completed successfully
+INFO: [HLS 200-112] Total CPU user time: 16.49 seconds. Total CPU system time: 1.21 seconds. Total elapsed time: 21.33 seconds; peak allocated memory: 273.762 MB.

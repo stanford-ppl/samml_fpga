@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd">
+    <xd:fcnMap xd:fcnName="mem_read" xd:type="hls_opencl" xd:clockId="0" xd:flow="explicit" xd:componentRef="mem_read" xd:source="mem_read.xo">
+        <xd:interrupt xd:busInterfaceRef="interrupt"/>
+        <xd:ctrlReg xd:busInterface="s_axi_control" xd:portInterfaceType="axilite" xd:name="control" xd:type="ap_ctrl_chain" xd:offset="0x0"/>
+        <xd:arg xd:name="mem" xd:swRootName="mem" xd:dataWidth="64" xd:offset="0x10" xd:portInterfaceType="axilite" xd:direction="in" xd:id="0" xd:busInterfaceRef="s_axi_control" xd:aximmMasterRef="m_axi_gmem" xd:aximmMasterDirection="inout" xd:aximmMasterDataWidth="32"/>
+        <xd:arg xd:name="size" xd:swRootName="size" xd:dataWidth="32" xd:offset="0x1C" xd:portInterfaceType="axilite" xd:direction="in" xd:id="1" xd:busInterfaceRef="s_axi_control"/>
+        <xd:arg xd:name="stream" xd:swRootName="stream" xd:dataWidth="24" xd:offset="0x0" xd:portInterfaceType="axis" xd:direction="out" xd:busInterfaceRef="stream"/>
+    </xd:fcnMap>
+</xd:repository>

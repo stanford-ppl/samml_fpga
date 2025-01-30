@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "unary",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "unary"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/unary.tcl",
+    "sourceLine": 27,
+    "success": true
+  }
+]

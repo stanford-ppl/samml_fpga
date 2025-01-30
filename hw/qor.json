@@ -1,29 +1,29 @@
 {
     "containers": [
         {
-            "name": "vadd", 
+            "name": "krnl_unary", 
             "meet_system_timing": "true", 
             "accelerators": [
                 {
-                    "name": "vadd", 
+                    "name": "mem_write", 
                     "check_timing": "true", 
                     "PipelineType": "none", 
                     "check_latency": "true", 
-                    "check_warning": "false", 
-                    "loops": [
-                        {
-                            "name": "mem_rd", 
-                            "PipelineII": "1"
-                        }, 
-                        {
-                            "name": "execute", 
-                            "PipelineII": "1"
-                        }, 
-                        {
-                            "name": "mem_wr", 
-                            "PipelineII": "1"
-                        }
-                    ]
+                    "check_warning": "false" 
+                },
+                {
+                    "name": "unary", 
+                    "check_timing": "true", 
+                    "PipelineType": "none", 
+                    "check_latency": "true", 
+                    "check_warning": "false" 
+                },
+                {
+                    "name": "mem_read", 
+                    "check_timing": "true", 
+                    "PipelineType": "none", 
+                    "check_latency": "true", 
+                    "check_warning": "false" 
                 }
             ]
         }

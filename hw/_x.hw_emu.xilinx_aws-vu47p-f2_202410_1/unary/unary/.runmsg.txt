@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: unary
+Log file: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/unary/unary/vitis_hls.log

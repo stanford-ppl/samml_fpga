@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: mem_write
+Log file: /home/ubuntu/samml_fpga/hw/_x.hw_emu.xilinx_aws-vu47p-f2_202410_1/mem_write/mem_write/vitis_hls.log

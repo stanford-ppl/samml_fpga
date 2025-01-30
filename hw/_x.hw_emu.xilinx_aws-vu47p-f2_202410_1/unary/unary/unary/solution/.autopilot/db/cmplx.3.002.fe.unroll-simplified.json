@@ -1,0 +1,20 @@
+{
+  "0": {
+    "basicblocks": 4,
+    "calls": "1",
+    "file": "unary.cpp",
+    "fileloc": 80,
+    "instructions": 12,
+    "name": "unary",
+    "total_instructions": 16
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "common.h",
+    "fileloc": 14,
+    "instructions": 4,
+    "name": "is_msb_set<17>",
+    "total_instructions": 4
+  }
+}
