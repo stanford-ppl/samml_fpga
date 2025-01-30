@@ -1,5 +1,0 @@
-<pragmas>
-<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<17, true>::operator long long() const" off="0" region="0" recursive="0"/>
-</pragmas>

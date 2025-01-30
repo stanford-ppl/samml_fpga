@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<BindInfo>
-	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="result_fu_111_p2" SOURCE="../../../src/unary.cpp:74" VARIABLE="result" MODULE="unary" LOOP="VITIS_LOOP_88_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
-	<BindNode BINDTYPE="op" DISPLAY="bind_op select" ID="" IMPL="auto_sel" LATENCY="0" OPTYPE="select" PRAGMA="" RTLNAME="result_1_fu_117_p3" SOURCE="../../../src/unary.cpp:71" VARIABLE="result_1" MODULE="unary" LOOP="VITIS_LOOP_88_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
-	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axilite" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" VARIABLE="" MODULE="unary" LOOP="" BUNDLEDNAME="control" DSP="0" BRAM="0" URAM="0" USAGE="interface" STORAGESUBTYPE="s_axilite" STORAGESIZE=""/>
-</BindInfo>

@@ -1,5 +1,0 @@
-unary_control_s_axi
-unary_regslice_both
-unary_regslice_both
-unary_flow_control_loop_pipe
-unary

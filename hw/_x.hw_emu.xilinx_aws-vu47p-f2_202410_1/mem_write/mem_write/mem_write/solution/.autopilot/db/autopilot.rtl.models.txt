@@ -1,5 +1,0 @@
-mem_write_gmem_m_axi
-mem_write_control_s_axi
-mem_write_regslice_both
-mem_write_flow_control_loop_pipe
-mem_write

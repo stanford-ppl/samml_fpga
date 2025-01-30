@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xd:repository xmlns:xd="http://www.xilinx.com/xd">
-    <xd:fcnMap xd:fcnName="unary" xd:type="hls_opencl" xd:clockId="0" xd:flow="explicit" xd:componentRef="unary" xd:source="unary.xo">
-        <xd:interrupt xd:busInterfaceRef="interrupt"/>
-        <xd:ctrlReg xd:busInterface="s_axi_control" xd:portInterfaceType="axilite" xd:name="control" xd:type="ap_ctrl_chain" xd:offset="0x0"/>
-        <xd:arg xd:name="in_val" xd:swRootName="in_val" xd:dataWidth="24" xd:offset="0x0" xd:portInterfaceType="axis" xd:direction="in" xd:busInterfaceRef="in_val"/>
-        <xd:arg xd:name="out_val" xd:swRootName="out_val" xd:dataWidth="24" xd:offset="0x0" xd:portInterfaceType="axis" xd:direction="out" xd:busInterfaceRef="out_val"/>
-    </xd:fcnMap>
-</xd:repository>

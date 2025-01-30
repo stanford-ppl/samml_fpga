@@ -1,4 +1,0 @@
-<VitisHLS:BurstInfo>
-    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="../../../src/unary.cpp:88:19" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="../../../src/unary.cpp:88:19" LoopName="VITIS_LOOP_88_1" ParentFunc="unary(hls::stream&lt;ap_int&lt;17&gt;, 0&gt;&amp;, hls::stream&lt;ap_int&lt;17&gt;, 0&gt;&amp;)"/>
-</VitisHLS:BurstInfo>
-

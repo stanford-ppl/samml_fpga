@@ -1,5 +1,0 @@
-mem_read_gmem_m_axi
-mem_read_control_s_axi
-mem_read_regslice_both
-mem_read_flow_control_loop_pipe
-mem_read
