@@ -1,2 +1,3 @@
-SAMML FPGA Nodes (XRT Native API's)
+SAMML Runner XRT (XRT Native API's)
 ==================================
+
