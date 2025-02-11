@@ -75,9 +75,7 @@ static void unioner(hls::stream<stream_type_t>& inCoordStream1,
                     hls::stream<stream_type_t>& outRef2Stream,
                     int size1, 
                     int size2) {
-// op: 
-// 0: add
-// 1: mul
+
 // Auto-pipeline is going to apply pipeline to this loop
 execute:
     int size = (size1 > size2) ? size1 : size2;
