@@ -5,6 +5,7 @@
 #include <ap_int.h>
 
 const int DATA_WIDTH = 17;
+const int DONE_BIT = 7;
 typedef ap_int<DATA_WIDTH> stream_type_t;
 
 const stream_type_t default_stop = ap_int<17>(1) << 16;

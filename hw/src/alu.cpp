@@ -57,39 +57,53 @@ Input Vector 2 from Global Memory --->|             |      |__|
 #include <stdint.h>
 #include <hls_stream.h>
 #include "common.h"
+#include "util.h"
 
 #define DATA_SIZE 4096
 
 // TRIPCOUNT identifier
 const int c_size = DATA_SIZE;
 
-static void read_input(unsigned int* in, hls::stream<unsigned int>& inStream, int size) {
-// Auto-pipeline is going to apply pipeline to this loop
-mem_rd:
-    for (int i = 0; i < size; i++) {
-#pragma HLS LOOP_TRIPCOUNT min = c_size max = c_size
-        inStream << in[i];
-    }
-}
 
-static void compute_add(hls::stream<unsigned int>& inStream1,
-                        hls::stream<unsigned int>& inStream2,
-                        hls::stream<unsigned int>& outStream,
-                        int size) {
+static void alu(hls::stream<stream_type_t>& inStream1,
+                hls::stream<stream_type_t>& inStream2,
+                hls::stream<stream_type_t>& outStream,
+                int size, 
+                int op) {
+// op: 
+// 0: add
+// 1: mul
 // Auto-pipeline is going to apply pipeline to this loop
 execute:
+    
     for (int i = 0; i < size; i++) {
 #pragma HLS LOOP_TRIPCOUNT min = c_size max = c_size
-        outStream << (inStream1.read() + inStream2.read());
-    }
-}
-
-static void write_result(unsigned int* out, hls::stream<unsigned int>& outStream, int size) {
-// Auto-pipeline is going to apply pipeline to this loop
-mem_wr:
-    for (int i = 0; i < size; i++) {
-#pragma HLS LOOP_TRIPCOUNT min = c_size max = c_size
-        out[i] = outStream.read();
+        // outStream << (inStream1.read() + inStream2.read());
+        stream_type_t in1, in2;
+        inStream1.read(in1);
+        inStream2.read(in2);
+        if (is_data(in1) & is_data(in2)) {
+            if (op == 0) {
+                outStream << in1 + in2;
+            }
+            else if (op == 1) {
+                outStream << in1 * in2;
+            }
+        }
+        else if (is_stop(in1) & is_stop(in2)) {
+            if (in1 == in2) {
+                outStream << in1;
+            }
+            else {
+                panic("Stop token mismatch\n");
+            }
+        }
+        else if (is_done(in1) & is_done(in2)) {
+            outStream << in1;
+        }
+        else {
+            panic("Token mismatch\n");
+        }
     }
 }
 
@@ -102,10 +116,10 @@ extern "C" {
         out  (output) --> Output Vector
         size (input)  --> Size of Vector in Integer
    */
-void vadd(unsigned int* in1, unsigned int* in2, unsigned int* out, int size) {
-    static hls::stream<unsigned int> inStream1("input_stream_1");
-    static hls::stream<unsigned int> inStream2("input_stream_2");
-    static hls::stream<unsigned int> outStream("output_stream");
+void vadd(stream_type_t* in1, stream_type_t* in2, stream_type_t* out, int size) {
+    static hls::stream<stream_type_t> inStream1("input_stream_1");
+    static hls::stream<stream_type_t> inStream2("input_stream_2");
+    static hls::stream<stream_type_t> outStream("output_stream");
 
 #pragma HLS INTERFACE m_axi port = in1 bundle = gmem0
 #pragma HLS INTERFACE m_axi port = in2 bundle = gmem1
@@ -115,7 +129,8 @@ void vadd(unsigned int* in1, unsigned int* in2, unsigned int* out, int size) {
     // dataflow pragma instruct compiler to run following three APIs in parallel
     read_input(in1, inStream1, size);
     read_input(in2, inStream2, size);
-    compute_add(inStream1, inStream2, outStream, size);
+    // compute_add(inStream1, inStream2, outStream, size);
+    alu(inStream1, inStream2, outStream, size, 0);
     write_result(out, outStream, size);
 }
 }
